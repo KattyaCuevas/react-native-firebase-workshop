@@ -13,9 +13,12 @@ export default function App() {
       .get()
       .then((collection) => {
         const newPosts = [];
-        collection.forEach(doc => newPosts.push(doc.data()));
+        collection.forEach((doc) =>
+          newPosts.push({ id: doc.id, ...doc.data() })
+        );
         setPosts(newPosts);
-      }).catch(error => console.log(error));
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
@@ -30,12 +33,11 @@ export default function App() {
             <Text>{item.author}</Text>
           </View>
         )}
-        keyExtractor={(post) => Number(post.id)}
+        keyExtractor={(post) => post.id}
       />
     </SafeAreaView>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -52,4 +54,9 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 10,
   },
+  // Add styles to the post item component
+  // At least, the title, the body and the author
+  // should have different font sizes,
+  // space between the posts,
+  // and padding to every post container
 });

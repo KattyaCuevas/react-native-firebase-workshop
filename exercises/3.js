@@ -7,7 +7,9 @@ export default function App() {
   const [posts, setPosts] = React.useState([]);
 
   React.useEffect(() => {
-    // Write your query here
+    // Write a query to get the collection of posts, ordered by
+    // the `createdAt` field in descendant order and save it in the
+    // state above
   }, []);
 
   return (
@@ -22,7 +24,7 @@ export default function App() {
             <Text>{item.author}</Text>
           </View>
         )}
-        keyExtractor={(post) => Number(post.id)}
+        keyExtractor={(post) => post.id}
       />
     </View>
   );

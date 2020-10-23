@@ -6,7 +6,7 @@ import {
   StyleSheet,
   SafeAreaView,
   TextInput,
-  TouchableOpacity,
+  Button,
 } from "react-native";
 
 import firebase from "../firebase";
@@ -50,9 +50,11 @@ function NewPostForm({ setPosts }) {
         value={author}
         onChangeText={(text) => setAuthor(text)}
       />
-      <TouchableOpacity onPress={createPost} style={styles.createButton}>
-        <Text>AGREGAR</Text>
-      </TouchableOpacity>
+      <Button
+        onPress={createPost}
+        style={styles.createButton}
+        title="AGREGAR"
+      />
     </View>
   );
 }
@@ -89,7 +91,7 @@ export default function App() {
             <Text style={styles.postAuthor}>{item.author}</Text>
           </View>
         )}
-        keyExtractor={(post) => Number(post.id)}
+        keyExtractor={(post) => post.id}
       />
     </SafeAreaView>
   );

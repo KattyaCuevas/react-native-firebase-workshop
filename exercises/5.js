@@ -58,7 +58,7 @@ export default function App() {
             <Text style={styles.postAuthor}>{item.author}</Text>
           </View>
         )}
-        keyExtractor={(post) => Number(post.id)}
+        keyExtractor={(post) => post.id}
       />
     </SafeAreaView>
   );

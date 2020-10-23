@@ -13,7 +13,9 @@ export default function App() {
       .get()
       .then((collection) => {
         const newPosts = [];
-        collection.forEach(doc => newPosts.push(doc.data()));
+        collection.forEach((doc) =>
+          newPosts.push({ id: doc.id, ...doc.data() })
+        );
         setPosts(newPosts);
       }).catch(error => console.log(error));
   }, []);
@@ -30,7 +32,7 @@ export default function App() {
             <Text>{item.author}</Text>
           </View>
         )}
-        keyExtractor={(post) => Number(post.id)}
+        keyExtractor={(post) => post.id}
       />
     </View>
   );

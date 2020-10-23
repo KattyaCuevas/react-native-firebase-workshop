@@ -15,7 +15,7 @@ export default function App() {
             <Text>{item.author}</Text>
           </View>
         )}
-        keyExtractor={(post) => Number(post.id)}
+        keyExtractor={(post) => post.id}
       />
     </View>
   );

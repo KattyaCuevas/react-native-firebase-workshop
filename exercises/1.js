@@ -1,9 +1,8 @@
 import React from "react";
-import { View, Text } from "react-native";
+// Import View and Text
+import {  } from "react-native";
 
 export default function App() {
-  return (
-    // Render your solution here
-    null
-  );
+  // Render a Text component wrapped in a View component with a text saying Hello World
+  return null;
 }

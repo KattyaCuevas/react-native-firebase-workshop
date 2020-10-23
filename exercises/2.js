@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+// Import FlatList here
+import { View, Text } from "react-native";
 import { POSTS } from "../utils/data";
 
 export default function App() {
