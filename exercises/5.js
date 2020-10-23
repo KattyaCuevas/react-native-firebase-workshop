@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+// Import TextInput and Button here
+import { View, Text, FlatList, StyleSheet, SafeAreaView } from "react-native";
 
 import firebase from "../firebase";
 
@@ -16,13 +9,20 @@ function NewPostForm({ setPosts }) {
   const [body, setBody] = React.useState("");
   const [author, setAuthor] = React.useState("");
 
-  function createPost({ setPosts }) {
+  function createPost() {
     const post = { title, body, author, createdAt: new Date() };
     // Create your new post here
+    // Send the data to firestore
+    // Update the posts state
+    // Clean the input values
   }
 
   return (
-    <View style={styles.formContainer}>{/* Render your form here */}</View>
+    <View style={styles.formContainer}>
+      {/* Render your form here */}
+      {/* Render tree inputs, one per state */}
+      {/* and a button to run the createPost function */}
+    </View>
   );
 }
 

@@ -27,6 +27,7 @@ export default function App() {
       <FlatList
         data={posts}
         renderItem={({ item }) => (
+          // Add style prop to the bellow components
           <View>
             <Text>{item.title}</Text>
             <Text>{item.body}</Text>
