@@ -1,6 +1,6 @@
 # React Native + Firebase workshop
 
-## Before start
+## Before start the workshop
 
 - Install yarn
 
@@ -14,7 +14,7 @@ $ brew install yarn
 $ yarn
 ```
 
-- Install expo-cli globally
+- Install `expo-cli` globally
 
 ```
 $ yarn global add expo-cli
@@ -25,7 +25,7 @@ $ yarn global add expo-cli
   - [Android Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
   - [iOS App Store](https://itunes.com/apps/exponent)
 
-- Run the project and open it in your device.
+- Run the project and open it on your device.
 
 ```
 $ yarn start
@@ -33,7 +33,7 @@ $ yarn start
 
 - Scan the QR code to open the expo app.
 
-> Note: Your mobile device should be in the same network of your computer.
+> Note: Your mobile device should be on the same network as your computer.
 
 ## Instructions
 
